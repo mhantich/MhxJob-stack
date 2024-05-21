@@ -1,5 +1,5 @@
 
-import WorkApplication from  '../model/workApplyed.js';
+import WorkApplication from  '../Model/WorkApplication.js';
 
 // Controller functions for Work Application model
 

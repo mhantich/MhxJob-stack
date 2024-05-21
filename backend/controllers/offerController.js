@@ -1,9 +1,9 @@
-// // offerController.js
+
 import Offer from  '../Model/Offer.js';
 
 // Controller functions for Offer model
 export const getAllOffers = async (req, res) => {
-  // const result = await Offer.insertMany(offers);
+
   const filter={}
   const sort={}
   if(req.query.cati){
