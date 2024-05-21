@@ -26,8 +26,9 @@ function Footer() {
               sx={{ color: "white" }}
             >
               <Box>
-              <Avatar  sx={{ width:{xs:70,md:100}, height: 24 }}  variant="square" src="/logo.png"/>
-
+                   <Typography sx={{
+                    
+                   }}>MhxJob</Typography>
                 <Typography
                   sx={{    fontSize: { xs: "0.5rem" }, marginBlock: "1rem" }}
                   variant="body2"
