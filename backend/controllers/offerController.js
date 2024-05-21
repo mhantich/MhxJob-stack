@@ -1,5 +1,5 @@
 // // offerController.js
-import Offer from  '../model/Offers.js';
+import Offer from  '../Model/Offer.js';
 
 // Controller functions for Offer model
 export const getAllOffers = async (req, res) => {
