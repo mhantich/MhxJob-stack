@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import { loadingpage } from '../animation';
 
 
+
 export default function PrivateRoute({ element }) {
     const authStatus = useSelector(selectAuthStatus);
     const currentUser = useSelector(selectLoggedInUser);

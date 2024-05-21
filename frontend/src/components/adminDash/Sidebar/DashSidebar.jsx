@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import PersonIcon from "@mui/icons-material/Person";
-
+import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from "@mui/icons-material/Work";
 
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -31,17 +31,24 @@ const dispatch = useDispatch()
       }}
       className="w-full md:w-56"
     >
+            <Link to="/">
+        <Button startIcon={<HomeIcon />}    >
+          home
+        </Button>
+      </Link>
+
       <Link to="profile">
-        <Button icons={<PersonIcon />}   active={pathname === "/dash/profile"   }>
+        <Button startIcon={<PersonIcon />}   >
           Profile
         </Button>
       </Link>
 
       <>
         <Link to="applecations">
-          <Button icons={<WorkIcon />} active={pathname  === "/dash/applecations"}>
+          <Button startIcon={<WorkIcon />} >
             your applecations
           </Button>
+
         </Link>
 
       </>
@@ -56,7 +63,7 @@ const dispatch = useDispatch()
       justifyContent: "start !important",
       textAlign: "start",
       border: "none   !important",
-}} onClick={()=>{dispatch(logoutAsync())}} icons={<LogoutIcon />} >
+}} onClick={()=>{dispatch(logoutAsync())}} startIcon={<LogoutIcon />} >
           log out
         </Button>
       </Box>

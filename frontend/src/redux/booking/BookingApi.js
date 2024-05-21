@@ -1,16 +1,19 @@
 import { axiosi } from "../config/axios"
 
-export const getBooking=async()=>{
+export const getBookings=async(cred)=>{
     try {
-        const res=await axiosi.get("work-applications")
+        const res=await axiosi.get("categories", cred )
+         
         return res.data
     } catch (error) {
+        
+      
         throw error.response.data
     }
 }
-export const createBooking=async(cred)=>{
+export const createBookings=async(cred)=>{
     try {
-        const res=await axiosi.post("work-applications",cred)
+        const res=await axiosi.post("work-applications/",cred)
         return res.data
     } catch (error) {
         

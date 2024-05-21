@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  TextField, Button, Box } from '@mui/material';
+import {  TextField, Button, Box, Stack } from '@mui/material';
 
 
 
@@ -36,10 +36,19 @@ const EditProfilePage = () => {
     <Box p={1} sx={{   height: { md: "100dvh" }}}  >
       <h1>Edit Profile</h1>
       
-     <form sx={{  '& .MuiTextField-root': {
+     <form  sx={{  '& .MuiTextField-root': {
       margin: '1rem',
-      width: '90%',                       
+      width: '90%',    
+      display:'flex'
+                         
     },}} onSubmit={handleSubmit}>
+
+<Stack
+  direction="column"
+  justifyContent="center"
+  alignItems="center"
+  spacing={2}
+>
         <TextField
           label="Name"
           name="name"
@@ -70,7 +79,7 @@ const EditProfilePage = () => {
         />
         <Button type="submit" variant="contained" color="primary">
           Save Changes
-        </Button>
+        </Button></Stack>
       </form> 
     </Box>
   );

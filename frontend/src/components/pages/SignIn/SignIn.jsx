@@ -29,7 +29,7 @@ export default function SignIn() {
 
   const error = useSelector(selectLoginError);
   const loggedInUser = useSelector(selectLoggedInUser);
-  const [email, setEmail] = React.useState("");
+  const [emails,setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   // Function to handle form submission
@@ -70,7 +70,8 @@ export default function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform any necessary action with email and password, such as sending them to a server
-    dispatch(loginAsync({ email, password }));
+    const email = emails.toLowerCase()
+    dispatch(loginAsync({email , password }));
   };
 
   return (
@@ -119,9 +120,9 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="email"
+              id="emails"
               label="Email Address"
-              name="email"
+              name="emails"
               autoComplete="email"
               onChange={(e) => setEmail(e.target.value)}
               autoFocus

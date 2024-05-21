@@ -81,9 +81,7 @@ const authSlice = createSlice({
       })
       .addCase(signupAsync.fulfilled, (state, action) => {
         state.signupStatus = "fulfilled";
-        state.status='fullfilled'
-        console.log(action.payload)
-        state.loggedInUser = action.payload;
+
       })
       .addCase(signupAsync.rejected, (state, action) => {
         state.signupStatus = "rejected";
@@ -96,6 +94,7 @@ const authSlice = createSlice({
       })
       .addCase(loginAsync.fulfilled, (state, action) => {
         state.loginStatus = "fulfilled";
+        state.status='fullfilled'
         state.loggedInUser = action.payload;
       })
       .addCase(loginAsync.rejected, (state, action) => {

@@ -19,11 +19,15 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
-import { createBookingsAsync } from "../../../redux/booking/bookingSlice";
 import { toast } from "react-toastify";
 import { selectLoggedInUser } from "../../../redux/auth/AuthSlice";
+import { createBookingsAsync ,selectgetBookingStatus,resetcreateBookingStatus} from "../../../redux/booking/BookingSlice";
+
 function JobDietlie() {
   const job = useSelector(selectSingleofferess);
+  const creartrstuts = useSelector(selectgetBookingStatus);
+
+
   const { id } = useParams();
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -53,8 +57,23 @@ const navigator =useNavigate()
         workOfferId: id,
         userId: currentUser?._id,
       })
+
+
     );
   };
+  useEffect(()=>{
+if(creartrstuts==='fulfilled'){
+  toast.success('hired Done')
+  setSelectedDate('')
+  dispatch(resetcreateBookingStatus())
+  navigator('/')
+
+}
+if(creartrstuts==='rejected'){
+  toast.error('try later ')
+  setSelectedDate('')
+}
+  })
 
   return (
     <Container>

@@ -75,7 +75,7 @@ export default function SignUp() {
  
       navigate("/Login");
 
-      
+
       setUser({
         name: '',
         gender: '',

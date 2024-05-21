@@ -5,6 +5,7 @@ import { errorHandler } from "../utils/handleErrors.js";
 import jwt from "jsonwebtoken";
 export const loginController = async (req, res, next) => {
   const { email, password } = req.body;
+  console.log(req.body)
 
   const errors = validationResult(req);
 
@@ -58,14 +59,16 @@ export const regesterController = async (req, res, next) => {
   const salt = bcrypt.genSaltSync(10);
 
   const hashedPassword = bcrypt.hashSync(password, salt);
-
+  console.log(req.body)
+  const normalizedEmail = email.toLowerCase();
+  console.log(normalizedEmail)
   const newUser = new User({
     name,
     gender,
     age,
     username,
     lastname,
-    email,
+    email:normalizedEmail,
     password,
     isWorker,
     password: hashedPassword,
@@ -77,6 +80,14 @@ export const regesterController = async (req, res, next) => {
     next(errorHandler(500, "cant regester"));
   }
 };
+
+
+
+
+
+
+
+
 export const checkAuth = async (req, res) => {
   try {
     if (req.user) {
