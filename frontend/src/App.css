@@ -1,0 +1,7 @@
+.MuiAvatarGroup-avatar {
+  width: 30px !important;
+  height: 30px !important;
+}
+.MuiPickersLayout-actionBar{
+  display: none !important;
+}
