@@ -191,7 +191,7 @@ function Catis() {
                       endIcon={<ArrowOutwardIcon sx={{ textTransform:'capitalize', fontSize:{xs:"0.5rem",md:"0.8rem"},}} color="secondary" />}
                     >
                       <Link to='/Jobs'>
-                      See All Jobs
+                      <p style={{color:'black',textDecoration:'none'}}>See All </p>
                       </Link>
                    
                     </Button>

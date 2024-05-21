@@ -428,7 +428,7 @@ function Offerce() {
           color="secondary"
           variant="outlined"
         >
-          <Link to={`/offers/${offerce._id}`}> Hire Now </Link>
+          <Link to={`/offers/${offerce._id}`}> <p style={{color:'black',textDecoration:'none'}}>Hire Now </p></Link>
         </Button>
       </CardActions>
     </Card>

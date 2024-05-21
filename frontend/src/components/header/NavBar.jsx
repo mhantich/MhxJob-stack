@@ -67,7 +67,7 @@ function NavBar() {
         <Avatar
           sx={{ width: { xs: 70, md: 100 }, height: 24 }}
           variant="square"
-          src="/logo.png"
+          src="logo.png"
         />
       </Box>
 
