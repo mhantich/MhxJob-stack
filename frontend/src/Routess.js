@@ -4,6 +4,7 @@ import HomelayOut from "./HomelayOut";
 import PrivateRoute from "./components/Private/PrivateRoute";
 import Lottie from "lottie-react";
 import { loadingpage } from "./components/animation";
+import NotFound from "./Notfound";
 
 // Lazy loading components
 const Services = lazy(() => import("./components/pages/Services/Services"));
@@ -44,6 +45,14 @@ export const Rts = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Offerce />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/*",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <NotFound />
           </Suspense>
         ),
       },

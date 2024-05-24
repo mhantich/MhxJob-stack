@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { createBookings, getBookings  } from "./BookingApi";
+import { createBookings  } from "./BookingApi";
 
 const initialState = {
   getBookingStatus: "idle",
