@@ -73,7 +73,7 @@ if(creartrstuts==='rejected'){
   toast.error('try later ')
   setSelectedDate('')
 }
-  })
+  },[creartrstuts])
 
   return (
     <Container>

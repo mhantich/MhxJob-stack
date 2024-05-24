@@ -61,9 +61,8 @@ export const selectBookingError = (state) => state.BookingSlice.getBookingError;
 
 // exporting reducers
 export const {
-    resetBookingStatus,
-    resetBookingErrors,
-    resetcreateBookingStatus
+
+    resetcreateBookingStatus,
 } = BookingSlice.actions;
 
 export default BookingSlice.reducer;
