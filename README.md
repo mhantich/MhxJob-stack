@@ -1,6 +1,6 @@
 ![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/homePage.png)
 ![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/aboutPage.png)
-![Screenshot of the project](https://github.com/mhantich/First-E-Commerce-/blob/main/screeshots/jobPage.png)
+![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/jobPage.png)
 ![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/offerPage.png)
 ![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/servicesPage.png)
 ![Screenshot of the project](https://github.com/mhantich/MhxJob-stack/blob/main/screeshots/loginPage.png)
